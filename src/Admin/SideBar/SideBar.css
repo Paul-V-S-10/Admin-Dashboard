@@ -1,0 +1,96 @@
+.sideBar {
+    background-color: rgb(32, 32, 32);
+    width: 15%;
+    padding: 20px;
+    color: rgb(200, 200, 200);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    position: fixed;
+
+    p {}
+
+    hr {
+        border: none;
+        height: 1px;
+        background-color: gray;
+    }
+
+    .profile {
+        .profileAdmin {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            transition: all 1s ease-in;
+            padding: 0 10px;
+
+            .profileAdminTagHead {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 10px;
+                /* gap between icon and name */
+                gap: 5px; 
+                border-radius: 3px;
+
+                .arrow {
+                    transition: all 0.3s ease-in;
+                    font-size: 20px;
+                }
+                .arrowRotate {
+                    font-size: 20px;
+                    transform: rotate(180deg);
+                    transition: all 0.3s ease-in;
+                }
+            }
+
+            .profileAdminTags {
+                max-height: 500px;
+                opacity: 1;
+                visibility: visible;
+                transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0.5s ease-in;
+
+                .profileAdminTag {
+                    display: flex;
+                    padding: 5px 20px;
+                    border-radius: 3px;
+                    align-items: center;
+                    /* gap between icon and name */
+                    gap: 5px;
+                }
+            }
+
+            .profileAdminTagsHide {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s linear, opacity 0.3s ease-in, visibility 0.3s ease-in;
+
+                .profileAdminTag {
+                    display: flex;
+                    padding: 5px 20px;
+                    border-radius: 3px;
+                    align-items: center;
+                    gap: 5px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .pages {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .page{
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+    }
+}
+.hoverGrey:hover{
+    background-color: rgb(47, 47, 47);
+}
